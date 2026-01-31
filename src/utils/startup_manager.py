@@ -1,6 +1,7 @@
 import os
 import sys
 import subprocess
+import tempfile
 
 class StartupManager:
     APP_NAME = "TomodOrange"
@@ -76,14 +77,14 @@ class StartupManager:
                 Set oWS = WScript.CreateObject("WScript.Shell")
                 Set oLink = oWS.CreateShortcut("{shortcut_path}")
                 oLink.TargetPath = "{python_exe}"
-                oLink.Arguments = "{script_path}"
+                oLink.Arguments = Chr(34) & "{script_path}" & Chr(34)
                 oLink.WorkingDirectory = "{working_dir}"
                 oLink.IconLocation = "{icon_path}"
                 oLink.Save
                 """
                 
                 # Write temp vbs file
-                vbs_path = os.path.join(working_dir, "create_shortcut.vbs")
+                vbs_path = os.path.join(tempfile.gettempdir(), "create_shortcut.vbs")
                 with open(vbs_path, "w") as f:
                     f.write(vbs_script)
                 
