@@ -15,7 +15,7 @@ from ui.log_viewer_window import LogViewerWindow
 def main():
     # Fix Taskbar Icon on Windows
     import ctypes
-    myappid = 'michaels.pomodoro.tomodorange.1.0' # arbitrary string
+    myappid = '1dragon.tomodorange.1.0' # arbitrary string
     ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
     app = QApplication(sys.argv)
