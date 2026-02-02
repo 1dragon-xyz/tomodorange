@@ -36,8 +36,8 @@ Most Pomodoro apps are stressful. They flash, tick, and demand your attention. *
 ### Setup
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/1dragon-xyz/michaels-pomodoro.git
-    cd michaels-pomodoro
+    git clone https://github.com/1dragon-xyz/tomodorange.git
+    cd tomodorange
     ```
 
 2.  **Install dependencies**:
