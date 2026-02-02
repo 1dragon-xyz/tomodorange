@@ -144,4 +144,9 @@ Thumbs.db
 Desktop.ini
 
 # User settings
-custom_settings.json
+
+# Local Artifacts
+TomodOrange.exe
+.agent/
+user_data/
+
