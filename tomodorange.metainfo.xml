@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>tomodorange</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT OR Apache-2.0</project_license>
+  <name>TomodOrange</name>
+  <summary>Native COSMIC™ Pomodoro timer for deep focus</summary>
+  <description>
+    <p>
+      TomodOrange is a lightweight, native Pomodoro timer designed specifically for the COSMIC™ desktop.
+      It prioritizes a distraction-free environment with rhythmic audio cues and high-contrast visuals.
+    </p>
+    <ul>
+      <li>Native libcosmic performance</li>
+      <li>Always-on-top floating timer</li>
+      <li>Mokugyo rhythmic ticking for flow state</li>
+      <li>Zero-distraction minutes-only display</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">tomodorange.desktop</launchable>
+  <categories>
+    <category>Utility</category>
+    <category>Clock</category>
+    <category>COSMIC</category>
+  </categories>
+  <content_rating type="oars-1.1" />
+  <branding>
+    <color type="primary" scheme_preference="light">#FF8C00</color>
+    <color type="primary" scheme_preference="dark">#FF4500</color>
+  </branding>
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/anhdh/tomodorange/main/assets/screenshot.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://github.com/anhdh/tomodorange</url>
+  <url type="bugtracker">https://github.com/anhdh/tomodorange/issues</url>
+  <developer_name>anhdh</developer_name>
+  <releases>
+    <release version="0.1.0" date="2026-05-13" />
+  </releases>
+</component>

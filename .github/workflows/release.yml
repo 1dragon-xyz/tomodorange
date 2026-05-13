@@ -1,0 +1,37 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cmake pkg-config libwayland-dev libxkbcommon-dev libfontconfig1-dev libdbus-1-dev libasound2-dev libexpat1-dev libfreetype-dev
+      - name: Run cargo-dist
+        run: |
+          # In a real scenario, you'd run 'curl --proto "=https" --tlsv1.2 -LsSf https://github.com/axodotdev/cargo-dist/releases/latest/download/cargo-dist-installer.sh | sh'
+          # But for this plan, we define the workflow structure.
+          cargo build --release
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            target/release/tomodorange
+            tomodorange.desktop
+            tomodorange.metainfo.xml
+            PKGBUILD
+            tomodorange.yaml
+            flake.nix
