@@ -1,6 +1,6 @@
 app-id: tomodorange
 runtime: org.freedesktop.Platform
-runtime-version: '23.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -8,7 +8,6 @@ command: tomodorange
 finish-args:
   - --share=ipc
   - --socket=wayland
-  - --socket=fallback-x11
   - --device=dri
   - --socket=pulseaudio
   - --persist=.config/tomodorange
@@ -24,3 +23,4 @@ modules:
     sources:
       - type: git
         url: https://github.com/1dragon-xyz/tomodorange.git
+        tag: v0.1.1
