@@ -44,7 +44,7 @@ yay -S tomodorange
 ### Nix
 Add TomodOrange to your `flake.nix` or run directly:
 ```bash
-nix run github:YOUR_USERNAME/tomodorange
+nix run github:1dragon-xyz/tomodorange
 ```
 
 ## Configuration
@@ -67,7 +67,7 @@ If you prefer to build the app yourself, follow these steps:
 #### Setup
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/YOUR_USERNAME/tomodorange.git
+    git clone https://github.com/1dragon-xyz/tomodorange.git
     cd tomodorange
     ```
 
