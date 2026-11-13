@@ -21,7 +21,7 @@ Every UI addition should use `libcosmic` primitives. Avoid custom CSS or non-sta
 ## How to Contribute
 
 1.  **Read the Agent & Contributor Rules**: If you are using an AI coding agent (or running an automated workflow), read [AGENTS.md](AGENTS.md) first.
-2.  **Match the Right Layer**: Confirm whether the issue belongs in Rust app code (`src/`), Cargo dependencies (`Cargo.toml` + `Cargo.lock`), Flatpak (`tomodorange.yaml` / `tomodorange.metainfo.xml`), AUR (`PKGBUILD`), or Nix (`flake.nix`).
+2.  **Match the Right Layer**: Confirm whether the issue belongs in Rust app code (`src/`), Cargo dependencies (`Cargo.toml` + `Cargo.lock`), Flatpak (`io.github._1dragon_xyz.tomodorange.yaml` / `.metainfo.xml`), AUR (`PKGBUILD`), or Nix (`flake.nix`).
 3.  **Fork & Branch**: Create a focused branch for your fix or feature.
 4.  **Implement**: Write clean, minimal Rust code and avoid unrelated dependency changes. If you modify `Cargo.toml`, you must also update `Cargo.lock`.
 5.  **Verify Locally** (mandatory before opening a PR):

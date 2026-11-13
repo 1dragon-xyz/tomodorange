@@ -7,7 +7,7 @@
 Check the layer(s) this PR modifies:
 - [ ] Rust application (`src/`)
 - [ ] Cargo dependencies (`Cargo.toml` + `Cargo.lock`)
-- [ ] Flatpak / Flathub metadata (`tomodorange.yaml`, `tomodorange.metainfo.xml`, `tomodorange.desktop`)
+- [ ] Flatpak / Flathub metadata (`io.github._1dragon_xyz.tomodorange.yaml`, `.metainfo.xml`, `.desktop`)
 - [ ] Arch Linux / AUR (`PKGBUILD`)
 - [ ] Nix (`flake.nix`)
 - [ ] Documentation / CI
