@@ -1,7 +1,7 @@
-use serde::{Deserialize, Serialize};
-use std::path::PathBuf;
 use directories::ProjectDirs;
+use serde::{Deserialize, Serialize};
 use std::fs;
+use std::path::PathBuf;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Config {
@@ -25,13 +25,13 @@ impl Default for Config {
 impl Config {
     pub fn load() -> Self {
         let config_path = Self::get_path();
-        
-        if let Ok(content) = fs::read_to_string(&config_path) {
-            if let Ok(config) = toml::from_str(&content) {
-                return config;
-            }
+
+        if let Ok(content) = fs::read_to_string(&config_path)
+            && let Ok(config) = toml::from_str(&content)
+        {
+            return config;
         }
-        
+
         // If file doesn't exist or is invalid, save default
         let default_config = Self::default();
         let _ = default_config.save();
@@ -49,7 +49,7 @@ impl Config {
     }
 
     pub fn get_path() -> PathBuf {
-        if let Some(proj_dirs) = ProjectDirs::from("com", "michaels", "tomodorange") {
+        if let Some(proj_dirs) = ProjectDirs::from("io.github", "1dragon-xyz", "tomodorange") {
             proj_dirs.config_dir().join("config.toml")
         } else {
             PathBuf::from("config.toml")

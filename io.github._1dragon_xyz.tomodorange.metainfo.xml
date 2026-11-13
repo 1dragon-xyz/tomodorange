@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>tomodorange</id>
+  <id>io.github._1dragon_xyz.tomodorange</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT OR Apache-2.0</project_license>
   <name>TomodOrange</name>
@@ -17,11 +17,10 @@
       <li>Zero-distraction minutes-only display</li>
     </ul>
   </description>
-  <launchable type="desktop-id">tomodorange.desktop</launchable>
+  <launchable type="desktop-id">io.github._1dragon_xyz.tomodorange.desktop</launchable>
   <categories>
     <category>Utility</category>
     <category>Clock</category>
-    <category>COSMIC</category>
   </categories>
   <content_rating type="oars-1.1" />
   <branding>
@@ -30,13 +29,18 @@
   </branding>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/anhdh/tomodorange/main/assets/screenshot.png</image>
+      <caption>TomodOrange Pomodoro timer window</caption>
+      <image>https://raw.githubusercontent.com/1dragon-xyz/tomodorange/main/assets/screenshot.png</image>
     </screenshot>
   </screenshots>
-  <url type="homepage">https://github.com/anhdh/tomodorange</url>
-  <url type="bugtracker">https://github.com/anhdh/tomodorange/issues</url>
-  <developer_name>anhdh</developer_name>
+  <url type="homepage">https://github.com/1dragon-xyz/tomodorange</url>
+  <url type="bugtracker">https://github.com/1dragon-xyz/tomodorange/issues</url>
+  <url type="vcs-browser">https://github.com/1dragon-xyz/tomodorange</url>
+  <developer id="io.github._1dragon_xyz">
+    <name>1dragon-xyz</name>
+  </developer>
   <releases>
+    <release version="0.1.1" date="2026-05-13" />
     <release version="0.1.0" date="2026-05-13" />
   </releases>
 </component>

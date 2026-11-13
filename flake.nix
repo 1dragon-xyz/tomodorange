@@ -41,9 +41,9 @@
           buildInputs = buildInputs;
           
           postInstall = ''
-            install -Dm644 tomodorange.desktop $out/share/applications/tomodorange.desktop
-            install -Dm644 assets/icon.png $out/share/icons/hicolor/256x256/apps/tomodorange.png
-            install -Dm644 tomodorange.metainfo.xml $out/share/metainfo/tomodorange.metainfo.xml
+            install -Dm644 io.github._1dragon_xyz.tomodorange.desktop $out/share/applications/io.github._1dragon_xyz.tomodorange.desktop
+            install -Dm644 assets/icon.png $out/share/icons/hicolor/256x256/apps/io.github._1dragon_xyz.tomodorange.png
+            install -Dm644 io.github._1dragon_xyz.tomodorange.metainfo.xml $out/share/metainfo/io.github._1dragon_xyz.tomodorange.metainfo.xml
           '';
         };
 
