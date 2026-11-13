@@ -27,6 +27,12 @@
     <color type="primary" scheme_preference="light">#FF8C00</color>
     <color type="primary" scheme_preference="dark">#FF4500</color>
   </branding>
+  <screenshots>
+    <screenshot type="default">
+      <caption>TomodOrange Pomodoro timer window</caption>
+      <image>https://raw.githubusercontent.com/1dragon-xyz/tomodorange/main/assets/screenshot.png</image>
+    </screenshot>
+  </screenshots>
   <url type="homepage">https://github.com/1dragon-xyz/tomodorange</url>
   <url type="bugtracker">https://github.com/1dragon-xyz/tomodorange/issues</url>
   <url type="vcs-browser">https://github.com/1dragon-xyz/tomodorange</url>
