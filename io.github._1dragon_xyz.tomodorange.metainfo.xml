@@ -40,6 +40,7 @@
     <name>1dragon-xyz</name>
   </developer>
   <releases>
+    <release version="0.1.2" date="2026-11-13" />
     <release version="0.1.1" date="2026-05-13" />
     <release version="0.1.0" date="2026-05-13" />
   </releases>

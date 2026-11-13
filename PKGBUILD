@@ -1,6 +1,6 @@
 # Maintainer: 1dragon-xyz <https://github.com/1dragon-xyz/tomodorange>
 pkgname=tomodorange
-pkgver=0.1.1
+pkgver=0.1.2
 pkgrel=1
 pkgdesc="Native COSMIC™ Pomodoro timer for deep focus"
 arch=('x86_64' 'aarch64')

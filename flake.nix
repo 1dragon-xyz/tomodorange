@@ -34,7 +34,7 @@
       {
         packages.default = pkgs.rustPlatform.buildRustPackage {
           pname = "tomodorange";
-          version = "0.1.0";
+          version = "0.1.2";
           src = ./.;
           cargoLock.lockFile = ./Cargo.lock;
           nativeBuildInputs = nativeBuildInputs;
