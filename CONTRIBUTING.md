@@ -20,11 +20,18 @@ Every UI addition should use `libcosmic` primitives. Avoid custom CSS or non-sta
 
 ## How to Contribute
 
-1.  **Find an Issue**: Look for issues labeled `good-first-issue`.
-2.  **Fork & Branch**: Create a branch for your fix/feature.
-3.  **Implement**: Write clean, commented Rust code.
-4.  **Test**: Ensure the app builds and runs as expected.
-5.  **Submit**: Open a Pull Request with a clear description of the changes.
+1.  **Read the Agent & Contributor Rules**: If you are using an AI coding agent (or running an automated workflow), read [AGENTS.md](AGENTS.md) first.
+2.  **Match the Right Layer**: Confirm whether the issue belongs in Rust app code (`src/`), Cargo dependencies (`Cargo.toml` + `Cargo.lock`), Flatpak (`io.github._1dragon_xyz.tomodorange.yaml` / `.metainfo.xml`), AUR (`PKGBUILD`), or Nix (`flake.nix`).
+3.  **Fork & Branch**: Create a focused branch for your fix or feature.
+4.  **Implement**: Write clean, minimal Rust code and avoid unrelated dependency changes. If you modify `Cargo.toml`, you must also update `Cargo.lock`.
+5.  **Verify Locally** (mandatory before opening a PR):
+    ```bash
+    cargo fmt --all -- --check
+    cargo clippy -- -D warnings
+    cargo build --release --locked
+    ```
+    (Or run `just check && cargo build --release --locked`.)
+6.  **Submit**: Fill out the [Pull Request Template](.github/PULL_REQUEST_TEMPLATE.md) completely, including exact checks run and whether the PR is AI-assisted. Unverified PRs or PRs with out-of-sync `Cargo.lock` files will be closed.
 
 ## Development Environment
 
