@@ -26,10 +26,10 @@ impl Config {
     pub fn load() -> Self {
         let config_path = Self::get_path();
 
-        if let Ok(content) = fs::read_to_string(&config_path) {
-            if let Ok(config) = toml::from_str(&content) {
-                return config;
-            }
+        if let Ok(content) = fs::read_to_string(&config_path)
+            && let Ok(config) = toml::from_str(&content)
+        {
+            return config;
         }
 
         // If file doesn't exist or is invalid, save default

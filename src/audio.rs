@@ -42,24 +42,24 @@ impl AudioEngine {
 
     pub fn play_tick(&self) {
         let cursor = Cursor::new(Arc::clone(&self.tick_data).to_vec());
-        if let Ok(source) = Decoder::new(cursor) {
-            if let Ok(sink) = Sink::try_new(&self._handle) {
-                sink.set_volume(0.45);
-                sink.append(source);
-                sink.detach();
-            }
+        if let Ok(source) = Decoder::new(cursor)
+            && let Ok(sink) = Sink::try_new(&self._handle)
+        {
+            sink.set_volume(0.45);
+            sink.append(source);
+            sink.detach();
         }
     }
 
     pub fn play_gong(&self) {
         if let Some(data) = &self.gong_data {
             let cursor = Cursor::new(Arc::clone(data).to_vec());
-            if let Ok(source) = Decoder::new(cursor) {
-                if let Ok(sink) = Sink::try_new(&self._handle) {
-                    sink.set_volume(0.7);
-                    sink.append(source);
-                    sink.detach();
-                }
+            if let Ok(source) = Decoder::new(cursor)
+                && let Ok(sink) = Sink::try_new(&self._handle)
+            {
+                sink.set_volume(0.7);
+                sink.append(source);
+                sink.detach();
             }
         }
     }

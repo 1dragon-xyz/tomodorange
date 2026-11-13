@@ -6,7 +6,6 @@ use config::Config;
 use cosmic::app::{Core, Task};
 use cosmic::iced::widget::{button, column, container, text};
 use cosmic::iced::{Alignment, Length, Subscription, time, window};
-use std::sync::Arc;
 
 struct TomodOrange {
     core: Core,
@@ -14,7 +13,7 @@ struct TomodOrange {
     remaining_secs: u32,
     state: TimerState,
     is_running: bool,
-    audio: Arc<AudioEngine>,
+    audio: AudioEngine,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq)]
@@ -51,12 +50,12 @@ impl cosmic::Application for TomodOrange {
             config,
             state: TimerState::Work,
             is_running: false,
-            audio: Arc::new(AudioEngine::new().expect("Audio init failed")),
+            audio: AudioEngine::new().expect("Audio init failed"),
         };
 
         let task = if app.config.always_on_top {
             let window_id = app.core.main_window_id().unwrap();
-            window::set_level(window_id, window::Level::AlwaysOnTop).into()
+            window::set_level(window_id, window::Level::AlwaysOnTop)
         } else {
             Task::none()
         };
