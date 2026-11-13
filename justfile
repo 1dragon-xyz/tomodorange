@@ -1,7 +1,8 @@
 # TomodOrange Justfile
 
 binary_name := "tomodorange"
-desktop_file := "tomodorange.desktop"
+app_id := "io.github._1dragon_xyz.tomodorange"
+desktop_file := "io.github._1dragon_xyz.tomodorange.desktop"
 
 # Build the application in release mode
 build:
@@ -36,7 +37,7 @@ install: build
     mkdir -p ~/.local/share/applications
     mkdir -p ~/.local/share/icons/hicolor/256x256/apps
     cp target/release/{{binary_name}} ~/.local/bin/{{binary_name}}
-    cp assets/icon.png ~/.local/share/icons/hicolor/256x256/apps/{{binary_name}}.png
+    cp assets/icon.png ~/.local/share/icons/hicolor/256x256/apps/{{app_id}}.png
     cp {{desktop_file}} ~/.local/share/applications/
     update-desktop-database ~/.local/share/applications/
 
@@ -44,7 +45,7 @@ install: build
 uninstall:
     rm -f ~/.local/bin/{{binary_name}}
     rm -f ~/.local/share/applications/{{desktop_file}}
-    rm -f ~/.local/share/icons/hicolor/256x256/apps/{{binary_name}}.png
+    rm -f ~/.local/share/icons/hicolor/256x256/apps/{{app_id}}.png
     update-desktop-database ~/.local/share/applications/
 
 # Clean build artifacts

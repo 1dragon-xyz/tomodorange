@@ -1,11 +1,11 @@
 mod audio;
 mod config;
 
-use cosmic::app::{Core, Task};
-use cosmic::iced::widget::{button, column, text, container};
-use cosmic::iced::{Alignment, Length, Subscription, time, window};
 use audio::AudioEngine;
 use config::Config;
+use cosmic::app::{Core, Task};
+use cosmic::iced::widget::{button, column, container, text};
+use cosmic::iced::{Alignment, Length, Subscription, time, window};
 use std::sync::Arc;
 
 struct TomodOrange {
@@ -33,7 +33,7 @@ impl cosmic::Application for TomodOrange {
     type Message = Message;
     type Flags = ();
     type Executor = cosmic::executor::Default;
-    const APP_ID: &'static str = "com.michaels.tomodorange";
+    const APP_ID: &'static str = "io.github._1dragon_xyz.tomodorange";
 
     fn core(&self) -> &Core {
         &self.core
@@ -67,12 +67,12 @@ impl cosmic::Application for TomodOrange {
     fn update(&mut self, message: Message) -> Task<Message> {
         match message {
             Message::Tick => {
-                    if self.is_running && self.remaining_secs > 0 {
-                        self.remaining_secs -= 1;
-                        
-                        if self.state == TimerState::Work && self.config.sound_enabled {
-                            self.audio.play_tick();
-                        }
+                if self.is_running && self.remaining_secs > 0 {
+                    self.remaining_secs -= 1;
+
+                    if self.state == TimerState::Work && self.config.sound_enabled {
+                        self.audio.play_tick();
+                    }
 
                     if self.remaining_secs == 0 {
                         self.switch_state();
@@ -100,12 +100,15 @@ impl cosmic::Application for TomodOrange {
     }
 
     fn view(&self) -> cosmic::Element<'_, Message> {
-        let time_str = format!("{:02}:{:02}", self.remaining_secs / 60, self.remaining_secs % 60);
+        let time_str = format!(
+            "{:02}:{:02}",
+            self.remaining_secs / 60,
+            self.remaining_secs % 60
+        );
 
         let content = column![
             text(time_str).size(60),
-            button(if self.is_running { "Pause" } else { "Start" })
-                .on_press(Message::ToggleTimer)
+            button(if self.is_running { "Pause" } else { "Start" }).on_press(Message::ToggleTimer)
         ]
         .spacing(10)
         .align_x(Alignment::Center);
@@ -125,7 +128,7 @@ impl TomodOrange {
         if self.config.sound_enabled {
             self.audio.play_gong();
         }
-        
+
         if self.state == TimerState::Work {
             self.state = TimerState::Break;
             self.remaining_secs = self.config.break_minutes * 60;

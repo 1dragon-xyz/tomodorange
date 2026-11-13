@@ -1,0 +1,32 @@
+id: io.github._1dragon_xyz.tomodorange
+runtime: org.freedesktop.Platform
+runtime-version: '25.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+command: tomodorange
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --device=dri
+  - --socket=pulseaudio
+  - --persist=.config/tomodorange
+build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin
+  env:
+    CARGO_HOME: /run/build/tomodorange/cargo
+modules:
+  - name: tomodorange
+    buildsystem: simple
+    build-commands:
+      - cargo build --release --locked --offline
+      - install -Dm755 target/release/tomodorange /app/bin/tomodorange
+      - install -Dm644 io.github._1dragon_xyz.tomodorange.desktop /app/share/applications/io.github._1dragon_xyz.tomodorange.desktop
+      - install -Dm644 assets/icon.png /app/share/icons/hicolor/256x256/apps/io.github._1dragon_xyz.tomodorange.png
+      - install -Dm644 io.github._1dragon_xyz.tomodorange.metainfo.xml /app/share/metainfo/io.github._1dragon_xyz.tomodorange.metainfo.xml
+      - install -Dm644 LICENSE /app/share/licenses/io.github._1dragon_xyz.tomodorange/LICENSE
+    sources:
+      - type: dir
+        path: .
+      # For Flathub submissions, replace `type: dir` with the tagged git release
+      # and append `cargo-sources.json` generated via `flatpak-cargo-generator.py Cargo.lock`.

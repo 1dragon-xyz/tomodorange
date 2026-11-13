@@ -32,7 +32,7 @@ TomodOrange isn't just another timer. It is built on a "Lean-First" philosophy t
 ### Flatpak (Recommended)
 TomodOrange is available on **Flathub**. You can install it directly from the **COSMIC AppCenter** or via command line:
 ```bash
-flatpak install flathub tomodorange
+flatpak install flathub io.github._1dragon_xyz.tomodorange
 ```
 
 ### Arch Linux (AUR)

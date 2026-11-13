@@ -30,8 +30,8 @@ jobs:
         with:
           files: |
             target/release/tomodorange
-            tomodorange.desktop
-            tomodorange.metainfo.xml
+            io.github._1dragon_xyz.tomodorange.desktop
+            io.github._1dragon_xyz.tomodorange.metainfo.xml
             PKGBUILD
-            tomodorange.yaml
+            io.github._1dragon_xyz.tomodorange.yaml
             flake.nix

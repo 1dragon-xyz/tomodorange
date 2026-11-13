@@ -954,21 +954,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "cosmic-ext-tomodorange"
-version = "0.1.0"
-dependencies = [
- "directories",
- "futures",
- "libcosmic",
- "once_cell",
- "rodio",
- "rust-embed",
- "serde",
- "tokio",
- "toml 0.8.23",
-]
-
-[[package]]
 name = "cosmic-freedesktop-icons"
 version = "0.4.0"
 source = "git+https://github.com/pop-os/freedesktop-icons#9c562fe3ecf03241a46a60c0078cd6ea10bd75ce"
@@ -4830,6 +4815,21 @@ name = "toml_write"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5d99f8c9a7727884afe522e9bd5edbfc91a3312b36a77b5fb8926e4c31a41801"
+
+[[package]]
+name = "tomodorange"
+version = "0.1.0"
+dependencies = [
+ "directories",
+ "futures",
+ "libcosmic",
+ "once_cell",
+ "rodio",
+ "rust-embed",
+ "serde",
+ "tokio",
+ "toml 0.8.23",
+]
 
 [[package]]
 name = "tracing"
