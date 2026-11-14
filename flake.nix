@@ -36,8 +36,8 @@
           pname = "tomodorange";
           version = "0.1.2";
           src = ./.;
-          cargoLock.lockFile = ./Cargo.lock;
-          nativeBuildInputs = nativeBuildInputs;
+          cargoHash = "sha256-1sBjtQmD9eWzGBXKea6Wa1pccwtmKTy9WcygG1NdLBY=";
+          nativeBuildInputs = [ pkgs.libcosmicAppHook ];
           buildInputs = buildInputs;
           
           postInstall = ''
