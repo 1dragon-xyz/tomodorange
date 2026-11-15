@@ -14,7 +14,7 @@ TomodOrange isn't just another timer. It is built on a "Lean-First" philosophy t
 *   **⚡ Maximum Efficiency**: Forget heavy web-based apps. TomodOrange is built in **Native Rust**, making it lightning-fast and extremely battery-friendly. It’s practically invisible to your system resources.
 *   **🌊 Flow-State Audio**: Features rhythmic **Mokugyo ticking** and high-fidelity ambient loops scientifically chosen to induce deep concentration and prevent "clock-watching" anxiety.
 *   **🎨 True COSMIC Integration**: Not a port or a wrapper. This is a **native libcosmic application** that respects your system themes, window behaviors, and visual language perfectly.
-*   **🛠 Set-and-Forget Reliability**: From the hardened Flatpak sandbox to reproducible builds, TomodOrange is engineered for stability. Install it once, and it will work forever.
+*   **🛠 Set-and-Forget Reliability**: From reproducible Nix builds to native system packaging, TomodOrange is engineered for stability. Install it once, and it will work forever.
 
 ## Features
 
@@ -29,12 +29,6 @@ TomodOrange isn't just another timer. It is built on a "Lean-First" philosophy t
 
 ## Installation
 
-### Flatpak (Recommended)
-TomodOrange is available on **Flathub**. You can install it directly from the **COSMIC AppCenter** or via command line:
-```bash
-flatpak install flathub io.github._1dragon_xyz.tomodorange
-```
-
 ### Arch Linux (AUR)
 Install using your favorite AUR helper:
 ```bash
@@ -46,6 +40,9 @@ Add TomodOrange to your `flake.nix` or run directly:
 ```bash
 nix run github:1dragon-xyz/tomodorange
 ```
+
+### Flatpak (Currently Not Working)
+Flatpak / Flathub packaging is currently not working, so TomodOrange is **not** available on Flathub or in the COSMIC AppCenter yet. Please use **Arch Linux (AUR)**, **Nix**, or [build from source](#build-from-source) instead.
 
 ## Configuration
 
